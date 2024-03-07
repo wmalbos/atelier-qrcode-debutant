@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Générateur de QRCode</title>
+
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <script src="./assets/js/qrcode.min.js" defer></script>
+    <script src="./assets/js/script.js" defer></script>
+</head>
+<body>
+
+<div class="panda">
+    <div class="panda__ear panda__ear--left"></div>
+    <div class="panda__ear panda__ear--right"></div>
+    <div class="panda__face">
+        <!-- Left eye-->
+        <div class="panda__eye-shade"></div>
+        <div class="panda__eye-white">
+            <div class="panda__eye-ball"></div>
+        </div>
+        <!-- Right eye-->
+        <div class="panda__eye-shade panda__eye-shade--right"></div>
+        <div class="panda__eye-white panda__eye-white--right">
+            <div class="panda__eye-ball"></div>
+        </div>
+        <!-- Nose-->
+        <div class="panda__nose"></div>
+    </div>
+    <div class="panda__body"></div>
+
+    <!-- Left foot-->
+    <div class="panda__foot">
+        <div class="panda__foot__finger"></div>
+    </div>
+    <!-- Right foot-->
+    <div class="panda__foot panda__foot--right">
+        <div class="panda__foot__finger"></div>
+    </div>
+</div>
+
+<div class="qrcode" id="qrcodeForm">
+
+    <!-- Left/Right panda hands -->
+    <div class="panda__hand"></div>
+    <div class="panda__hand panda__hand--right"></div>
+
+    <!-- QRCode form -->
+    <h1 class="qrcode__title">Générateur de QRCode</h1>
+
+    <div class="qrcode__group form-group">
+        <input type="text" class="qrcode__input" required="required" id="qrcodeText"/>
+        <label class="qrcode__label">Texte ou URL</label>
+    </div>
+
+    <div class="qrcode__group qrcode__group--options">
+        <label for="qrcodeSizes" class="qrcode__label">Taille :</label>
+        <select name="qrcode_sizes" id="qrcodeSizes" class="qrcode__select">
+            <option value="100">100x100</option>
+            <option value="200">200x200</option>
+            <option value="300">300x300</option>
+            <option value="400">400x400</option>
+            <option value="500">500x500</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <div class="qrcode__message">
+            <p class="qrcode__message__content">Formulaire invalide... !!</p>
+        </div>
+        <button class="qrcode__button" id="qrcodeButtonGenerate">Générer</button>
+    </div>
+</div>
+
+<div class="qrcode__results">
+    <div class="qrcode__preview">
+        <div class="qrcode__preview__content" id="qrcodePreviewContent"></div>
+        <a href="" class="qrcode__preview__url" id="qrcodePreviewUrl" target="_blank"
+           rel="noreferrer, noopener"></a>
+        <a href="" class="qrcode__preview__download" id="qrcodePreviewDownload" download></a>
+    </div>
+
+    <div class="qrcode__controls">
+        <button id="qrcodeButtonDownload" class="qrcode__button qrcode__button--download" disabled>Télécharger
+        </button>
+    </div>
+</div>
+</body>
+</html>

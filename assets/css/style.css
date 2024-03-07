@@ -1,0 +1,459 @@
+@import url(https://fonts.googleapis.com/css?family=Dancing+Script|Roboto);
+
+:root {
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*, *:after, *:before {
+    box-sizing: border-box;
+}
+
+html, body {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    background: #0c5e31;
+
+}
+
+.panda {
+    position: relative;
+    width: 200px;
+    margin: 50px auto;
+}
+
+.panda__face {
+    width: 200px;
+    height: 200px;
+    background: #fff;
+    border-radius: 100%;
+    margin: 50px auto;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
+    z-index: 50;
+    position: relative;
+}
+
+.panda__ear{
+        position: absolute;
+        width: 80px;
+        height: 80px;
+        background: #000;
+        z-index: 5;
+        border: 10px solid #fff;
+        left: -15px;
+        top: -15px;
+        border-radius: 100%;
+}
+.panda__ear--right{
+    content: '';
+    left: 125px;
+}
+
+.panda__eye-shade {
+    background: #000;
+    width: 50px;
+    height: 80px;
+    margin: 10px;
+    position: absolute;
+    top: 35px;
+    left: 25px;
+    transform: rotate(220deg);
+    border-radius: 25px/20px 30px 35px 40px;
+}
+
+.panda__eye-shade--right {
+    transform: rotate(140deg);
+    left: 105px;
+}
+.panda__eye-white {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    background: #fff;
+    z-index: 500;
+    left: 40px;
+    top: 80px;
+    overflow: hidden;
+}
+.panda__eye-white--right {
+    right: 40px;
+    left: auto;
+}
+.panda__eye-ball {
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    left: 20px;
+    top: 20px;
+    max-width: 10px;
+    max-height: 10px;
+    transition: 0.1s;
+}
+.panda__eye-ball::after{
+    content: '';
+    background: #000;
+    position: absolute;
+    border-radius: 100%;
+    right: 0;
+    bottom: 0px;
+    width: 20px;
+    height: 20px;
+}
+.panda__nose {
+    position: absolute;
+    height: 20px;
+    width: 35px;
+    bottom: 40px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border-radius: 50px 20px/30px 15px;
+    transform: rotate(15deg);
+    background: #000;
+}
+.panda__body {
+    background: #fff;
+    position: absolute;
+    top: 200px;
+    left: -20px;
+    border-radius: 100px 100px 100px 100px/126px 126px 96px 96px;
+    width: 250px;
+    height: 282px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.panda__foot {
+    top: 360px;
+    left: -80px;
+    position: absolute;
+    background: #000;
+    z-index: 1400;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 40px 40px 39px 40px/26px 26px 63px 63px;
+    width: 82px;
+    height: 120px;
+}
+.panda__foot:after {
+    content: '';
+    width: 55px;
+    height: 65px;
+    background: #222;
+    border-radius: 100%;
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.panda__foot__finger,
+.panda__foot__finger:after,
+.panda__foot__finger:before {
+    position: absolute;
+    width: 25px;
+    height: 35px;
+    background: #222;
+    border-radius: 100%;
+    top: 10px;
+    right: 5px;
+}
+
+.panda__foot__finger:after,
+.panda__foot__finger:before {
+    content: '';
+    right: 30px;
+    width: 20px;
+    top: 0;
+}
+
+.panda__foot__finger:before {
+    right: 55px;
+    top: 5px;
+}
+
+.panda__foot--right {
+    left: auto;
+    right: -80px;
+}
+.panda__foot--right .panda__foot__finger,
+.panda__foot--right .panda__foot__finger:after,
+.panda__foot--right .panda__foot__finger:before {
+    left: 5px;
+    right: auto;
+}
+.panda__foot--right .panda__foot__finger:after {
+    left: 30px;
+    right: auto;
+}
+.panda__foot--right .panda__foot__finger:before {
+    left: 55px;
+    right: auto;
+}
+
+.panda__hand,
+.panda__hand:after,
+.panda__hand:before {
+    width: 40px;
+    height: 30px;
+    border-radius: 50px;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.15);
+    background: #000;
+    margin: 5px;
+    position: absolute;
+    top: 70px;
+    left: -25px;
+}
+.panda__hand:after,
+.panda__hand:before {
+    content: '';
+    left: -5px;
+    top: 11px;
+}
+.panda__hand:before {
+    top: 26px;
+}
+.panda__hand--right,
+.panda__hand--right:after,
+.panda__hand--right:before {
+    left: auto;
+    right: -25px;
+}
+.panda__hand--right:after,
+.panda__hand--right:before {
+    left: auto;
+    right: -5px;
+}
+
+.qrcode {
+    max-width: 400px;
+    padding: 20px 40px;
+    background: #fff;
+    height: 300px;
+    margin: auto;
+    display: block;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
+    transition: 0.3s;
+    position: relative;
+    transform: translateY(-100px);
+    z-index: 500;
+    border: 1px solid #eee;
+}
+
+.qrcode__title {
+    color: #30be70;
+    font-family: 'Dancing Script', cursive;
+    margin:0 0 15px 0;
+}
+.qrcode__button {
+    background: #fff;
+    padding: 5px;
+    width: 150px;
+    height: 35px;
+    border: 1px solid #30be70;
+    margin-top: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 50px #249154 inset;
+    color: #fff;
+}
+.qrcode__button:hover {
+    box-shadow: 0 0 #30be70 inset;
+    color: #30be70;
+}
+.qrcode__button:focus {
+    outline: none;
+}
+
+.qrcode__button:disabled{
+    display: none;
+}
+
+.qrcode__button--download {
+    background:#249154;
+    box-shadow: 0 50px #fff inset;
+    color:#30be70;
+   border:none;
+}
+.qrcode__button--download:hover {
+    box-shadow: 0 0 #249154 inset;
+    color: #fff;
+}
+.qrcode__preview{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.qrcode__preview img {
+    max-width: 250px;
+}
+.qrcode__preview__url {
+    width: 100%;
+    text-align: center;
+    color:#fff;
+    margin: 10px 0 0 0;
+}
+.qrcode__group {
+    position: relative;
+    font-size: 15px;
+    color: #666;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+.qrcode__group + .qrcode__group{
+    margin-top: 30px;
+}
+
+.qrcode__group .qrcode__label {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 5px;
+    transition: 0.3s;
+}
+
+.qrcode__group .qrcode__input {
+    width: 100%;
+    position: relative;
+    z-index: 3;
+    height: 35px;
+    background: none;
+    border: none;
+    padding: 5px 0;
+    transition: 0.3s;
+    border-bottom: 1px solid #777;
+    color: #555;
+}
+
+.qrcode__group .qrcode__select {
+    width: 100%;
+    position: relative;
+    z-index: 3;
+    height: 35px;
+    background: none;
+    border: none;
+    padding: 5px 0;
+    transition: 0.3s;
+    border-bottom: 1px solid #777;
+    color: #555;
+}
+
+.qrcode__group .qrcode__input:invalid {
+    outline: none;
+}
+.qrcode__group--options .qrcode__select,
+.qrcode__group .qrcode__input:focus,
+.qrcode__group .qrcode__input:valid {
+    outline: none;
+    box-shadow: 0 1px #30be70;
+    border-color: #30be70;
+}
+.qrcode__group--options .qrcode__label,
+.qrcode__group .qrcode__input:focus + .qrcode__label,
+.qrcode__group .qrcode__input:valid + .qrcode__label {
+    font-size: 12px;
+    color: #30be70;
+    transform: translateY(-15px);
+}
+
+.qrcode__message {
+    position: absolute;
+
+    right: -180px;
+    top:-100px;
+    z-index: 200;
+}
+
+.qrcode__message__content {
+    transform: scale(0);
+    transition-delay: .3s;
+    color: #f00;
+    font-size: 16px;
+    padding: 30px 25px;
+    background: #fff;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    opacity: 0;
+}
+.qrcode__message:after,
+.qrcode__message:before {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background: #fff;
+    left: -19px;
+    bottom: -8px;
+    transform: scale(0);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    transition-delay: .2s;
+}
+.qrcode__message:before {
+    width: 15px;
+    height: 15px;
+    left: -35px;
+    bottom: -25px;
+    transition-delay: .1s;
+}
+
+.wrong-entry {
+    -webkit-animation: wrong-log 0.3s;
+    animation: wrong-log 0.3s;
+}
+.wrong-entry .qrcode__message {
+    opacity: 1;
+}
+
+.wrong-entry .qrcode__message::before {
+    transform: scale(1);
+}
+.wrong-entry .qrcode__message::after {
+    transform: scale(1);
+}
+.wrong-entry .qrcode__message__content {
+    transform: scale(1);
+    opacity: 1;
+}
+
+@-webkit-keyframes eye-blink {
+    to {
+        height: 30px;
+    }
+}
+@keyframes eye-blink {
+    to {
+        height: 30px;
+    }
+}
+@-webkit-keyframes wrong-log {
+    0%, 100% {
+        left: 0px;
+    }
+    20% , 60% {
+        left: 20px;
+    }
+    40% , 80% {
+        left: -20px;
+    }
+}
+@keyframes wrong-log {
+    0%, 100% {
+        left: 0px;
+    }
+    20% , 60% {
+        left: 20px;
+    }
+    40% , 80% {
+        left: -20px;
+    }
+}
